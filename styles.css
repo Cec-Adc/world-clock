@@ -70,6 +70,7 @@ h2 {
 .time small {
   font-size: 30px;
   vertical-align: middle;
+  line-height: 42px;
 }
 
 footer {
