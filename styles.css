@@ -76,3 +76,67 @@ h2 {
 footer {
   text-align: center;
 }
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 15px 20px;
+    margin: 80px auto 20px auto;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .time {
+    font-size: 28px;
+  }
+
+  .time small {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 5px 15px 0px 15px;
+    margin: 80px auto 20px auto;
+  }
+
+  .date {
+    font-size: 9px;
+  }
+
+  .time {
+    font-size: 18px;
+  }
+
+  .time small {
+    font-size: 10px;
+    line-height: 28px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
