@@ -54,7 +54,8 @@ function showTimeInSelectedCity(event) {
         "h:mm:ss"
       )} <small>${selectedCityData.format("A")}</small></div>
     </div>
-  </div>`;
+  </div>
+  <a href="/">Back to all cities</a>`;
 }
 
 let selectCitiesElement = document.querySelector("#city");
