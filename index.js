@@ -37,6 +37,9 @@ setInterval(showSydneyTime, 1000);
 //Multiple locations
 function showTimeInSelectedCity(event) {
   let selectedCityTimeZone = event.target.value;
+  if (selectedCityTimeZone === "current") {
+    selectedCityTimeZone = moment.tz.guess();
+  }
   let cityName = selectedCityTimeZone.replace("_", " ").split("/")[1];
   let selectedCityData = moment().tz(selectedCityTimeZone);
   let selectedCityElement = document.querySelector("#cities");
