@@ -34,6 +34,24 @@ function showSydneyTime() {
 showSydneyTime(); //so that it shows some text on the page when it's loading, otherwise it would be empty
 setInterval(showSydneyTime, 1000);
 
+//Sydney
+function showMetzTime() {
+  let metzDateElement = document.querySelector("#metz .date");
+  if (metzDateElement) {
+    let metzCurrentDate = moment().format("MMMM Do YYYY");
+    metzDateElement.innerHTML = metzCurrentDate;
+
+    let metzTimeElement = document.querySelector("#metz .time");
+    let metzCurrentTime = moment()
+      .tz("Europe/Paris")
+      .format("h:mm:ss [<small>]A[</small>]");
+    metzTimeElement.innerHTML = metzCurrentTime;
+  }
+}
+
+showMetzTime(); //so that it shows some text on the page when it's loading, otherwise it would be empty
+setInterval(showMetzTime, 1000);
+
 //Multiple locations
 function showTimeInSelectedCity(event) {
   let selectedCityTimeZone = event.target.value;
@@ -55,7 +73,8 @@ function showTimeInSelectedCity(event) {
       )} <small>${selectedCityData.format("A")}</small></div>
     </div>
   </div>
-  <a href="/">Back to all cities</a>`;
+  <div style="margin-top: 20px;"><a href="index.html">Back to all cities</a></div>
+`;
 }
 
 let selectCitiesElement = document.querySelector("#city");
